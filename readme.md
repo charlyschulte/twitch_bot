@@ -1,3 +1,8 @@
+This is a simple nodejs script for twitch
+it can be called via chat or trigger actions when a new follower or subscription is added.
+
+you can directly call apis or home assistant scenes / scripts
+
 1) generate oauth token here:
 //https://twitchapps.com/tmi/
 
