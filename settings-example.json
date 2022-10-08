@@ -1,0 +1,35 @@
+{
+    "channel":"CHANNEL TO WATCH",
+    "botname":"YOUR BOT NAME FOR ANSWERS",
+    "onetimepassword":"ONE TIME PASSWORD README STEP 1", 
+    "accessToken":"ACCESS TOKEN FROM STEP 3",
+    "hatoken":"HOME ASSISTANT TOKEN",
+    "haurl":"https://HOME ASSISTANT URL:PORT",
+    "timeoutmessage":"Hey USERNAME Der Befehl BEFEHL ist gerade im Cooldown für SEKUNDEN Sekunden",
+    "websocketsTopics":["channel-points-channel-v1.CHANNELIDGOESHERE"],
+    "actions":[{
+        "action":"REWARD ID FROM REWARDS.json",
+        "type":"callapi",
+        "trigger":"http://localhost:8082/",
+        "answer":"Klar USERNAME, ich geb gas!"
+    },{
+        "action":"subsciption",
+        "type":"hascene",
+        "trigger":"scene.SCENETOCALL"
+    },{
+        "action":"follower",
+        "type":"hascene",
+        "trigger":"scene.SCENETOCALL"
+    }],
+    "commands": [{
+        "command": "!COMMANDS",
+        "type":"hascene",
+        "trigger": "scene.SCENETOCALL"
+    },{
+        "command": "!orange",
+        "type":"hascript",
+        "timeout":13,
+        "answer":"Moin meister",
+        "trigger": "script.SCENETOCALL"
+    }]
+}

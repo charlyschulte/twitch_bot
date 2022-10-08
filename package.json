@@ -1,0 +1,19 @@
+{
+  "name": "twitchbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.0.0",
+    "fs": "^0.0.1-security",
+    "got": "^11.8.0",
+    "tmi.js": "^1.8.5",
+    "ws": "^8.9.0"
+  }
+}
