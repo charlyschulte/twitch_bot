@@ -1,27 +1,57 @@
-This is a simple nodejs script for twitch
-it can be called via chat or trigger actions when a new follower or subscription is added.
 
-you can directly call apis or home assistant scenes / scripts
+# Twitch Chat, Follower and Reward bot
 
-1) generate oauth token here:
-//https://twitchapps.com/tmi/
+An easy to use, open source twitch bot that can be triggered by chat commands,
+Follows and Rewards.
+It can directly trigger Home Assistant Scenes and Scripts and also call api endpoints for things like companion.
+written in Nodejs
+
+## Features
+
+- Trigger Home Assistant Scripts
+- Trigger Home Assistant Scenes
+- Trigger Api´s
+- Cross platform
 
 
-2) create dev account twitch
 
-3) create access token
-https://twitchapps.com/tokengen/
+## Install
+1) Install nodejs
 
-with scopes:
-channel:manage:redemptions user:edit:follows channel:read:redemptions channel:read:subscriptions
+2) generate oauth token here: //https://twitchapps.com/tmi/
 
-4) fill informations : settings.json
+3) create dev account twitch https://dev.twitch.tv/
 
-5) run: "node runupdate.json"
+4) create access token https://twitchapps.com/tokengen/
+with scopes: channel:manage:redemptions user:edit:follows channel:read:redemptions channel:read:subscriptions
 
-6) view rewards.json and fill ids in settings
- 
-7) Run "npm i"
+5) Clone the project
 
-8) run "npm run start"
+```bash
+  git clone https://github.com/charlyschulte/twitch_bot
+```
+
+6) Go to the project directory
+
+```bash
+  cd twitch_bot
+```
+7) fill informations : settings.json
+8) run: 
+```bash
+"node runupdate.json"
+```
+9) view rewards.json and fill ids in settings
+
+10) Install dependencies
+
+```bash
+  npm install
+```
+
+11) Start the server
+
+```bash
+  npm run start
+```
 
