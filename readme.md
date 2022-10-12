@@ -36,18 +36,17 @@ with scopes: channel:manage:redemptions user:edit:follows channel:read:redemptio
 ```bash
   cd twitch_bot
 ```
-7) fill informations : settings.json
-8) run: 
-```bash
-node runupdate.json
-```
-9) view rewards.json and fill ids in settings
-
-10) Install dependencies
+7) Install dependencies
 
 ```bash
   npm install
 ```
+8) fill informations : settings.json
+9) run: 
+```bash
+node runupdate.js
+```
+10) view rewards.json and fill ids in settings
 
 11) Start the server
 
