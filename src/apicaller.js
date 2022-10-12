@@ -65,7 +65,7 @@ function triggerCommands(command, username) {
     (element) => element.command == command
   );
   if (!found) return;
-  trigger(found, foundIndex, username);
+  trigger(found, foundIndex, username,true);
 }
 function triggerActions(action, username) {
   var found = parsedJSON.actions.find((element) => element.action == action);
@@ -74,10 +74,11 @@ function triggerActions(action, username) {
   );
   if (!found) return;
   console.log("GOT Trigger"+foundIndex);
-  trigger(found, foundIndex, username);
+  trigger(found, foundIndex, username,false);
 }
-function trigger(found, foundIndex, username) {
-  checktimeout(found, foundIndex, username,twitchResponse);
+function trigger(found, foundIndex, username,calltimeout=false) {
+  if(calltimeout)
+    checktimeout(found, foundIndex, username,twitchResponse);
   if (found.type === "hascene") {
     if (found.answer !== undefined) {
       twitchResponse(found.answer, username);
@@ -96,6 +97,7 @@ function trigger(found, foundIndex, username) {
     }
     callapi(found.trigger);
   }
+  
 }
 exports.triggerCommands = triggerCommands;
 exports.triggerActions = triggerActions;
