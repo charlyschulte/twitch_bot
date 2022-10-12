@@ -18,12 +18,14 @@ written in Nodejs
 ## Install
 1) Install nodejs
 
-2) generate oauth token here: //https://twitchapps.com/tmi/
+2) generate oauth token here: //https://twitchapps.com/tmi/ login with bot account and fill it in settings.json at "onetimepassword" and username of the bot at "botname"
 
-3) create dev account twitch https://dev.twitch.tv/
+3) create dev account twitch https://dev.twitch.tv/ with main account
 
-4) create access token https://twitchapps.com/tokengen/
+4) create access token https://twitchapps.com/tokengen/ 
 with scopes: channel:manage:redemptions user:edit:follows channel:read:redemptions channel:read:subscriptions
+login with main account and fill information at "accessToken" and channel name at "channel"
+
 
 5) Clone the project
 
