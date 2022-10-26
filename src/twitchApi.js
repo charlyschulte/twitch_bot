@@ -21,10 +21,10 @@ const getCustomRewards = async () => {
 
 async function getTwitchFollower(){
     await validateToken();
-    let { body } =await got(`https://api.twitch.tv/helix/users/follows?from_id=${userId}`, { headers: headers });
+    let { body } =await got(`https://api.twitch.tv/helix/users/follows?to_id=${userId}&first=1`, { headers: headers });
     let followers =  JSON.parse(body).data;
     let lastFollower = followers[0];
-    if(lastFollowers!=null && lastFollower.to_id!==lastFollowers){
+    if(lastFollowers!=null && lastFollower.from_id!==lastFollowers){
         triggerActions("follower",lastFollower.to_name);
     }
     setTimeout(getTwitchFollower, 15000);
