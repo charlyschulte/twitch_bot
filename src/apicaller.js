@@ -14,7 +14,7 @@ const twitchApi = axios.create({
   },
 });
 let client;
-function twitchResponse(message, username) {
+function twitchResponse(message, username="") {
   client.say(parsedJSON.channel, message.replace("USERNAME", username));
 }
 function startClient() {
@@ -101,3 +101,4 @@ function trigger(found, foundIndex, username,calltimeout=false) {
 }
 exports.triggerCommands = triggerCommands;
 exports.triggerActions = triggerActions;
+exports.twitchResponse = twitchResponse;
