@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  twitchbot:
+    build: .
+    image: twitchbot
+    ports:
+     - 3002:3002
