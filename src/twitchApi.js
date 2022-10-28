@@ -20,7 +20,8 @@ const getCustomRewards = async () => {
 }
 
 async function getTwitchFollower(){
-    await validateToken();
+    try {
+        await validateToken();
     let { body } =await got(`https://api.twitch.tv/helix/users/follows?to_id=${userId}&first=1`, { headers: headers });
     let followers =  JSON.parse(body).data;
     let lastFollower = followers[0];
@@ -29,6 +30,13 @@ async function getTwitchFollower(){
     }
     lastFollowers=lastFollower.from_id;
     setTimeout(getTwitchFollower, 15000);
+    return;
+    } catch (error) {
+        console.log("TWITCH Follower could not be loaded");
+        setTimeout(getTwitchFollower, 15000);
+        return;
+    }
+    
 }
 const validateToken = async () => {
     let r
