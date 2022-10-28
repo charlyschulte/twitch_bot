@@ -57,5 +57,7 @@ node runupdate.js
 ```
 
 
-Docker startup 
+# Docker startup 
+```bash
 docker-compose up -d --force-recreate --build
+```
