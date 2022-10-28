@@ -25,9 +25,9 @@ async function getTwitchFollower(){
     let followers =  JSON.parse(body).data;
     let lastFollower = followers[0];
     if(lastFollowers!=null && lastFollower.from_id!==lastFollowers){
-        triggerActions("follower",lastFollower.to_name);
+        triggerActions("follower",lastFollower.from_name);
     }
-    lastFollowers=lastFollower;
+    lastFollowers=lastFollower.from_id;
     setTimeout(getTwitchFollower, 15000);
 }
 const validateToken = async () => {
